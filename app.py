@@ -1,4 +1,17 @@
+import streamlit as st
+import pandas as pd
+import google.generativeai as genai
+import numpy as np
+import io
+import PyPDF2
+from PIL import Image
+import plotly.graph_objects as go
 
+# --- CONFIGURATION ---
+st.set_page_config(page_title="Octabyte | Synthetic EHR", layout="wide", page_icon="🧬")
+# --- CUSTOM UI DESIGN (TECHY BLUE) ---
+st.markdown("""
+<style>
     /* Main Background */
     .stApp {
         background-color: #0a1428; /* Deep dark blue */
